@@ -1,43 +1,30 @@
-# Time Manager API
+# theme02
 
-This project aims to create a platform-independent API for Gotham City Hall to manage user information, working times, and clocking data.
+This template should help get you started developing with Vue 3 in Vite.
 
-## Installation
+## Recommended IDE Setup
 
-Ensure that you have Elixir and Docker installed on your system before proceeding.
+[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
 
-Follow these links to install those softwares in case you don't have it :
+## Customize configuration
 
-https://elixir-lang.org/install.html
+See [Vite Configuration Reference](https://vitejs.dev/config/).
 
-https://docs.docker.com/desktop/
+## Project Setup
 
-### Local Installation
-
-```
-git clone git@github.com:EpitechMscProPromo2025/T-POO-700-PAR_8.git
+```sh
+npm install
 ```
 
-```
-mix deps.get
-mix ecto.create
-mix ecto.migrate
-```
+### Compile and Hot-Reload for Development
 
-### Docker Installation
-
-```
-docker build -t timemanager-app:latest .
-docker-compose down
-docker-compose up
+```sh
+npm run dev
 ```
 
-## Normal Usage
+### Compile and Minify for Production
 
+```sh
+npm run build
 ```
-mix phx.server
-```
-
-## Testing
-
-After migrating the database, ensure its accuracy and thoroughly test the various endpoints. You can use tools like Postman for comprehensive testing.
+"# Front-Part-MSc-Pool" 

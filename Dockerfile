@@ -1,19 +1,16 @@
-FROM elixir:1.14.5
+FROM node:lts-alpine
 
-RUN curl -sL https://deb.nodesource.com/setup_14.x | bash -
-RUN apt-get install -y nodejs
+RUN npm install -g http-server
 
 WORKDIR /app
 
+COPY package*.json ./
+
+RUN npm install
+
 COPY . .
 
-RUN mix local.hex --force && \
-    mix local.rebar --force && \
-    mix deps.get && \
-    mix deps.compile && \
-    mix compile && \
-    mix release
+RUN npm run build
 
-EXPOSE 4000
-
-CMD ["mix", "ecto.reset" ]
+EXPOSE 8080
+CMD [ "http-server", "dist" ]
